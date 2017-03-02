@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloGitHub", "HelloGitHub\HelloGitHub.vcxproj", "{E390B694-5833-4E27-A1B1-4BE279E4B80A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomEnemyGenerator2", "RandomEnemyGenerator2\RandomEnemyGenerator2.vcxproj", "{716D1875-9393-4DFB-B821-226786DB061A}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TheWalkingDead", "TheWalkingDead\TheWalkingDead.vcxproj", "{B809F8FB-7D32-456E-8E1C-89AADBEDE748}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynArray", "DynArray\DynArray.vcxproj", "{E2D48AF6-863C-4A9F-A7AF-92361E46AE13}"
@@ -27,14 +25,6 @@ Global
 		{E390B694-5833-4E27-A1B1-4BE279E4B80A}.Release|x64.Build.0 = Release|x64
 		{E390B694-5833-4E27-A1B1-4BE279E4B80A}.Release|x86.ActiveCfg = Release|Win32
 		{E390B694-5833-4E27-A1B1-4BE279E4B80A}.Release|x86.Build.0 = Release|Win32
-		{716D1875-9393-4DFB-B821-226786DB061A}.Debug|x64.ActiveCfg = Debug|x64
-		{716D1875-9393-4DFB-B821-226786DB061A}.Debug|x64.Build.0 = Debug|x64
-		{716D1875-9393-4DFB-B821-226786DB061A}.Debug|x86.ActiveCfg = Debug|Win32
-		{716D1875-9393-4DFB-B821-226786DB061A}.Debug|x86.Build.0 = Debug|Win32
-		{716D1875-9393-4DFB-B821-226786DB061A}.Release|x64.ActiveCfg = Release|x64
-		{716D1875-9393-4DFB-B821-226786DB061A}.Release|x64.Build.0 = Release|x64
-		{716D1875-9393-4DFB-B821-226786DB061A}.Release|x86.ActiveCfg = Release|Win32
-		{716D1875-9393-4DFB-B821-226786DB061A}.Release|x86.Build.0 = Release|Win32
 		{B809F8FB-7D32-456E-8E1C-89AADBEDE748}.Debug|x64.ActiveCfg = Debug|x64
 		{B809F8FB-7D32-456E-8E1C-89AADBEDE748}.Debug|x64.Build.0 = Debug|x64
 		{B809F8FB-7D32-456E-8E1C-89AADBEDE748}.Debug|x86.ActiveCfg = Debug|Win32

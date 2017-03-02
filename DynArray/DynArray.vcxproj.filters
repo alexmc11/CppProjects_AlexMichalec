@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DynArray.cpp">
+    <ClCompile Include="DynArray.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="main.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DynArray.h">
+    <ClInclude Include="DynArray.hh">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
