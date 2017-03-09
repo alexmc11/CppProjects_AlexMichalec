@@ -16,6 +16,7 @@ DynArray::DynArray(size_t size, const int & value)
 }
 
 
+
 DynArray::~DynArray(void)
 {
 	delete[] m_data;
@@ -31,6 +32,8 @@ int * DynArray::end(void) const
 	return m_data+m_size;
 }
 
+
+
 void DynArray::fill(int * first, int * last, int value)
 {
 	while (first != last)
@@ -39,6 +42,8 @@ void DynArray::fill(int * first, int * last, int value)
 		first++;
 	}
 }
+
+
 
 int & DynArray::operator[](size_t n) const
 {
@@ -56,4 +61,34 @@ bool operator==(const DynArray & lhs, const DynArray & rhs)
 			return false;
 	}
 	return true;
+}
+
+void DynArray::push(const int & val)
+{
+	if (m_capacity == m_size)
+	{
+		reserve(m_capacity + m_size/2);
+	}
+	
+	m_data[m_size] = val;
+	m_size++;
+}
+
+
+void DynArray::reserve(size_t n)
+{
+	if (m_capacity < n)
+	{
+		m_capacity = n;
+
+	}
+}
+
+void DynArray::copy(int * first, int * last, int * dest)
+{
+	while (first != last)
+	{
+		*dest = *first;
+		first++, dest++;
+	}
 }
