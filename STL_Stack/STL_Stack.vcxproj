@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{415E39A0-5179-4D9F-9C64-A0215F60E196}</ProjectGuid>
+    <ProjectGuid>{C0DA4526-71BF-4BCD-A72D-B1AB6AF1DB87}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>P1_G2_AlexMichalec_MarcArdila</RootNamespace>
+    <RootNamespace>STL_Stack</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
