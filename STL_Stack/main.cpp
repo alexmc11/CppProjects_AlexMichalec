@@ -1,26 +1,51 @@
 #include <stack>
 #include <iostream>
+#include <queue>
 
 
 std::stack<int> superMerge(std::stack<int> a, std::stack<int> b)
 {
 	std::stack<int> c;
+	std::stack<int> c2;
 
-	for (int i = 0; i < a.size(); i++)
+
+	while (!a.empty() && !b.empty())
 	{
 		
+		if (a.top() > b.top())
+		{
+			c.push(a.top());
+			a.pop();
+		}
+		else if(a.top() < b.top())
+		{
+			c.push(b.top());
+			b.pop();
+		}
 	}
-	while (!a.empty())
+	if (a.empty())
 	{
-		c.push(a.top());
-		a.pop();
+		while (!b.empty())
+		{
+			c.push(b.top());
+			b.pop();
+		}
 	}
-	while (!b.empty())
+	else if (b.empty())
 	{
-		c.push(b.top());
-		b.pop();
+		while (!a.empty())
+		{
+			c.push(a.top());
+			a.pop();
+		}
 	}
-	return c;
+	while (!c.empty())
+	{
+		c2.push(c.top());
+		c.pop();
+	}
+
+	return c2;
 }
 
 std::stack<int> putHat(std::stack<int> a, std::stack<int> b)
@@ -40,13 +65,38 @@ std::stack<int> putHat(std::stack<int> a, std::stack<int> b)
 	return b;
 }
 
-void printStack(std::stack<int> s)
+std::queue<int> transformToQ(std::stack<int> s)
 {
+	std::queue<int> q;
+	
 	while (!s.empty())
 	{
-		int print = s.top();
+		q.push(s.top());
+		s.pop();
+	}
+	return q;
+}
+
+void printStack(std::stack<int> s)
+{
+	int print;
+	while (!s.empty())
+	{
+		print = s.top();
 		std::cout << print;
 		s.pop();
+	}
+	std::cout << std::endl;
+}
+
+void printQueue(std::queue<int> q)
+{
+	int print;
+	while (!q.empty())
+	{
+		print = q.front();
+		std::cout << print;
+		q.pop();
 	}
 	std::cout << std::endl;
 }
@@ -55,11 +105,11 @@ void main()
 {
 	//SUPERMERGE
 	std::stack<int> s1;
-	s1.push(3), s1.push(2), s1.push(1);
+	s1.push(1), s1.push(4), s1.push(8);
 	std::stack<int> s2;
-	s2.push(6), s2.push(5), s2.push(4);
+	s2.push(4), s2.push(5), s2.push(6);
 	std::stack<int> sup;
-	sup = superMerge(s1, s2);
+	//sup = superMerge(s1, s2);
 	std::cout << "Super Merge" << std::endl;
 	printStack(sup);
 	
@@ -72,5 +122,14 @@ void main()
 	hat = putHat(s3, s4);
 	std::cout << "Put Hat" << std::endl;
 	printStack(hat);
+
+	//TRANSFORMTOQ
+	std::queue<int> q1;
+	std::stack<int> s5;
+	s5.push(5), s5.push(4), s5.push(3), s5.push(2);
+	q1 = transformToQ(s5);
+	std::cout << "Transform To Queue" << std::endl;
+	printQueue(q1);
+
 
 }
