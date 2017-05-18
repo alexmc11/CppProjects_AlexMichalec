@@ -8,6 +8,7 @@ struct node {
 
 class myList
 {
+	int size;
 	node *first;
 	node *last;
 
@@ -16,6 +17,11 @@ public:
 	myList(myList &m);
 	~myList();
 	void push_front(int elem);
-	int size();
+	void remove(int num);
+	void reverse();
+	void shiftLeft();
+	void shiftRight();
+	void rotateLeft();
+	void rotateRight();
 };
 
